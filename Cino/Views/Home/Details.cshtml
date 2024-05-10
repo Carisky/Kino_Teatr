@@ -1,0 +1,24 @@
+﻿@model Cino.Models.Film
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+<div class="container">
+    <h1>@Model.Title</h1>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Author: @Model.Author</h5>
+            <p class="card-text">Style: @Model.Style</p>
+        </div>
+    </div>
+    <button class="btn btn-primary" onclick="goBack()">Back</button>
+</div>
+
+<script>
+    function goBack() {
+        window.history.back();
+    }
+</script>
